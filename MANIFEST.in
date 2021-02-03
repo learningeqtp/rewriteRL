@@ -1,0 +1,4 @@
+include rewriterl/data/robinson/train
+include rewriterl/data/robinson/valid
+include rewriterl/data/robinson/test
+recursive-include rewriterl/data/polynomial *
