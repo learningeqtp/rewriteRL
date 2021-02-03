@@ -26,9 +26,9 @@ Install graphviz (this does not work via pip)
 conda install graphviz
 ```
 
-Install the environment
+Install the environment (tested 03-02-21)
 ```
-pip install https://github.com/learningeqtp/rewriteRL
+pip install git+git://github.com/learningeqtp/rewriteRL.git
 ```
 # Overview
 The environment can run in 2 different modes: the Robinson arithmetic mode and the polynomial arithmetic mode. These provide different actions and different sets of problems.
@@ -53,6 +53,9 @@ The last 3 actions do not move the cursor, all other actions reset the cursor to
 ```python
 from rewriterl.env import Robinson
 from rewriterl.load_parse import load_dataset
+# The first time you need to preload the dataset - we parse it one time and then store it in tree format
+# from rewriterl.load_parse import preload_dataset
+# preload_dataset("train")
 
 dataset = load_dataset("train")
 example, value, difficulty, index = dataset[7]
