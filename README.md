@@ -5,7 +5,7 @@ In general, the project hopes to provide a testing ground for reinforcement lear
 
 RewriteRL provides an Gym-like environment for the development of reinforcement learning algorithms for arithmetical rewriting. One of the goals was to be able to easily draw trees for each expression (see figures below), so that the behavior of the RL algorithms on the problems could be intuitively observed. While RA is not very practically useful, it is complicated enough to possibly serve as a test case for machine learning algorithms. The polynomial arithmetical problems especially look to be very hard to learn with reinforcement learning techniques - with 28 available actions, the space of possible path to take is very large. It also has several variables (x, y, z) that the algorithm will need to reason about. There is also a potential for looping behavior, providing an extra challenge.
 
-Warning: Note that this package is mainly for personal use at the moment, and not all components have been thoroughly tested.
+Note that some features of this package may still be rough around the edges.
 ## Primer on Robinson Arithmetic
 Robinson arithmetic is a set of rules that can be used to modify expressions. The only operations that are used in Robinson arithmetic are the successor operation, which gives the succesor of a number on the number line (i.e. s(s(0)) = 2), the addition operation and the multiplication operation. There are only a few operations permitted on the expression tree (this is further discussed in the Actions section.) It consists of the following axioms:
 
