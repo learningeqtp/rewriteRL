@@ -12,7 +12,7 @@ from rewriterl.tree_ops import insert_cursor_node, winning_state
 from torch.distributions import Categorical
 
 class TreeNNCursor2(nn.Module):
-    # TODO Make every operation a neural network
+    
     def __init__(self, embedding_dim=5, internal_dim=2, bilinear_mul=False):
         """"
         Initialize, we need a value for the zero token and for each of the possible transformations
@@ -493,9 +493,6 @@ if __name__ == "__main__":
     parser.add_argument('-n', '--expname', help='Batches per iter', required=True)
     parser.add_argument('-z', '--server', help='On server?', required=True, type=int)
     parser.add_argument('-m', '--memory', help='How many memories to keep of each problem', required=True, type=int)
-
-    # TODO: Make replay buffer keeping only wins also a parameter
-    # Still not sure how keeping only the wins factors into the learning
 
     args = parser.parse_args()
     n_warm_up_episodes = args.warmup
