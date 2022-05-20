@@ -530,4 +530,4 @@ if __name__ == "__main__":
 
 
     # Call this file using something like:
-    # "nohup python only_policy.py --warmup 1000 --batches 250 --episodes 1000 --evals 400 --batchsize 32 --hidden 64 --learningrate 0.001 --duration 100 --epochs 250 --statespace 16 --expname S1P1R_stored_1  --server 1 --memory 1 > log.txt &"
+    # "nohup python 3sil_example.py --warmup 1000 --batches 250 --episodes 1000 --evals 400 --batchsize 32 --hidden 64 --learningrate 0.001 --duration 100 --epochs 250 --statespace 16 --expname S1P1R_stored_1  --server 1 --memory 1 > log.txt &"
